@@ -22,7 +22,7 @@ export default function App () {
 
   function removeFromFaves(movieToRemove){
     console.log("FAVE REMOVE " + movieToRemove.id);
-    const updatedFaves = faveMovies.filter(faveMovie => faveMovie.id != movieToRemove.id)
+    const updatedFaves = faveMovies.filter(faveMovie => faveMovie.id !== movieToRemove.id)
     changeFavourites(updatedFaves)
   }
 

@@ -6,7 +6,7 @@ export default function MovieCard (props){
     const [on, changeOn] = useState(checkIfFave())
 
     function checkIfFave (){
-        const faveMatch = props.faveMovies.find(movie => movie.id == props.movie.id )
+        const faveMatch = props.faveMovies.find(movie => movie.id === props.movie.id )
         if (faveMatch) {
             return(true)
         }
