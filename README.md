@@ -1,7 +1,7 @@
 # Movie search app
 Current app was created in React. It allows to search for movies using The Movie Database (TMDb) API.
 
-Check it out [HERE](https://vibrant-goldstine-4e13fb.netlify.app)
+Check it out [HERE](https://vibrant-pare-73da7a.netlify.app/)
 
 Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
