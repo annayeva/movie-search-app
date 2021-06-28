@@ -15,3 +15,8 @@
 .movieTitle {
     font-size: 3.2rem;
   }
+
+  .faveIcon {
+    margin-left: 1rem;
+    cursor: pointer;
+  }

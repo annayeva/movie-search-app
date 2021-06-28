@@ -2,13 +2,12 @@ import React, {useState} from "react"
 import MovieCard from "./MovieCard"
 import "./style.css"
 
-export default function SearchMovies (){
+export default function SearchMovies (props){
     const [query, setQuery] = useState('')
     const [movies, setMovies] = useState([])
 
     const searchMovies = async (e) => {
         e.preventDefault()
-        console.log("submiting")
         const url = `https://api.themoviedb.org/3/search/movie?api_key=cf554a05ab1259620a51e098b72c8864&language=en-US&query=${query}&page=1&include_adult=false`;
        
         try{
@@ -29,7 +28,7 @@ export default function SearchMovies (){
             </form>
             <div className="card-list">
                 {movies.filter(movie => movie.poster_path).map(movie => (
-                    <MovieCard movie={movie} key={movie.id} />
+                    <MovieCard removeFromFaves={props.removeFromFaves} addToFaves={props.addToFaves} faveMovies={props.faveMovies} movie={movie} key={movie.id} />
                 ))}
             </div>
         </div>
