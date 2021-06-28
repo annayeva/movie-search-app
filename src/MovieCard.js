@@ -7,7 +7,6 @@ export default function MovieCard (props){
 
     function checkIfFave (){
         const faveMatch = props.faveMovies.find(movie => movie.id == props.movie.id )
-        console.log(faveMatch);
         if (faveMatch) {
             return(true)
         }
@@ -18,11 +17,9 @@ export default function MovieCard (props){
 
     function toggle () {
         if(!on){
-            //console.log("added")
             props.addToFaves(props.movie)
         }
         else{
-            //console.log("removed")
             props.removeFromFaves(props.movie)
         }
         changeOn(!on)
